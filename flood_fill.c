@@ -6,7 +6,7 @@
 /*   By: fde-alme <fde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 14:12:24 by fde-alme          #+#    #+#             */
-/*   Updated: 2025/06/13 16:04:57 by fde-alme         ###   ########.fr       */
+/*   Updated: 2025/06/13 16:09:26 by fde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ void	dfs(char **tab, t_point size, int x, int y)
 
 void	flood_fill(char **tab, t_point size, t_point begin)
 {
+	// Invalid start position
+	if (tab[begin.x][begin.y] == '1')
+		return ;
+
 	dfs(tab, size, begin.x, begin.y);
 }
 
